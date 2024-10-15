@@ -19,6 +19,19 @@ permissions:
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 
 jobs:
+  my_job:
+    runs-on: [self-hosted, gha-argocd-dev]
+    steps:
+      - name: Executar ação
+        run: echo "Olá, mundo!"
+      - name: Exibir Log Personalizado
+        run: |
+          echo "Iniciando o processo..."
+          for i in $(seq 0 10 100); do
+            echo "Progresso: $i%"
+            sleep 1
+          done
+          echo "Processo concluído! Acesse: https://sua-url-exemplo.com"
   # Single deploy job since we're just deploying
   deploy:
     environment:
