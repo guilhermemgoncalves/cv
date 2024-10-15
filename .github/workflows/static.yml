@@ -29,7 +29,7 @@ jobs:
             echo "Progresso: $i%"
             sleep 1
           done
-          echo "Processo concluído! Acesse: https://sua-url-exemplo.com"
+          echo "Processo concluído! Acesse: https://argocd.tools.dev.np.santander-br.sa-east-1.santanderglobalcards.corp/applications/plataforma-backend-backoffice-portal-landing-page-dev"
   # Single deploy job since we're just deploying
   deploy:
     environment:
