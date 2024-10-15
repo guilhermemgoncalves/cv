@@ -20,7 +20,6 @@ permissions:
 
 jobs:
   my_job:
-    my_job:
     runs-on: ubuntu-latest
     steps:
       - name: Exibir Log Personalizado
