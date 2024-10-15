@@ -20,18 +20,14 @@ permissions:
 
 jobs:
   my_job:
-    runs-on: [self-hosted, gha-argocd-dev]
+    my_job:
+    runs-on: ubuntu-latest
     steps:
-      - name: Executar ação
-        run: echo "Olá, mundo!"
       - name: Exibir Log Personalizado
+        if: ${{ github.event.inputs.execute_custom_step == 'true' }}
         run: |
           echo "Iniciando o processo..."
-          for i in $(seq 0 10 100); do
-            echo "Progresso: $i%"
-            sleep 1
-          done
-          echo "Processo concluído! Acesse: https://sua-url-exemplo.com"
+          # Seus comandos aqui
   # Single deploy job since we're just deploying
   deploy:
     environment:
