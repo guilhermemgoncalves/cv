@@ -23,7 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Exibir Log Personalizado
-        if: ${{ github.event.inputs.execute_custom_step == 'true' }}
         run: |
           echo "Iniciando o processo..."
           for i in $(seq 0 10 100); do
