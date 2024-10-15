@@ -26,7 +26,11 @@ jobs:
         if: ${{ github.event.inputs.execute_custom_step == 'true' }}
         run: |
           echo "Iniciando o processo..."
-          # Seus comandos aqui
+          for i in $(seq 0 10 100); do
+            echo "Progresso: $i%"
+            sleep 1
+          done
+          echo "Processo concluído! Acesse: https://sua-url-exemplo.com"
   # Single deploy job since we're just deploying
   deploy:
     environment:
